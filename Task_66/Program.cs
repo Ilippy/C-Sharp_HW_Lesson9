@@ -15,13 +15,8 @@ internal partial class Program
 
     static int SumNumbers(int start, int end)
     {
-        if (start > end)
-        {
-            int temp = start;
-            start = end;
-            end = temp;
-        }
+        int increment = start > end ? -1 : 1;
         if (start == end) return end;
-        return start + SumNumbers(start + 1, end);
+        return start + SumNumbers(start + increment, end);
     }
 }
