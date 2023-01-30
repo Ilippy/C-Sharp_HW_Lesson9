@@ -2,11 +2,12 @@
 // 453 -> 12
 // 45 -> 9
 
+using NumberMain;
 internal partial class Program
 {
     private static void Main(string[] args)
     {
-        int number = 1234567;
+        int number = Numbers.EnterNumber("Введите целое число");
         
         Console.WriteLine($"\n{number} -> {recursive(number)}");
 

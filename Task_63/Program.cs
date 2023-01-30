@@ -3,17 +3,18 @@
 // N = 6 -> "1, 2, 3, 4, 5, 6"
 
 
+using NumberMain;
 internal class Program
 {
     private static void Main(string[] args)
     {
-        int number = 4;
+        int number = Numbers.EnterNumber("Введите целое число N");
         Console.WriteLine($"N = {number} -> {recursive(number)}");
     }
 
 // recursive(4-1) + "4" = recurse(3-1) + "3 4 " = recurse(2-1) + "2 3 4 " = recurse(1-1) + "1 2 3 4 " = "1 2 3 4 "
     static string recursive(int number){
-        if(number == 0) return String.Empty;
+        if(number <= 0) return String.Empty;
         return recursive(number-1) + $"{number} ";
     }
 }
