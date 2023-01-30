@@ -8,8 +8,8 @@ internal partial class Program
 {
     private static void Main(string[] args)
     {
-        int m = Numbers.EnterNumber("Введите целое число M");
-        int n = Numbers.EnterNumber("Введите целое число N");
+        int m = Numbers.EnterNumber("Введите целое натуральное число M", 1, int.MaxValue);
+        int n = Numbers.EnterNumber("Введите целое натуральное число N", 1, int.MaxValue);
         Console.WriteLine($"M = {m}, N = {n} -> {SumNumbers(m, n)}");
     }
 
