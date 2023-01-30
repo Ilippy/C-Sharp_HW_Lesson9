@@ -23,5 +23,5 @@ internal partial class Program
             return AkkermanFunction(m - 1, AkkermanFunction(m, n - 1));
     }
 
-    
+
 }

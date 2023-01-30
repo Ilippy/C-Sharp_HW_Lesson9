@@ -12,8 +12,9 @@ internal partial class Program
         Console.WriteLine($"N = {number} -> \"{recursive(number)}\"");
     }
 
-    static string recursive(int number){
-        if(number == 1) return "1";
-        return $"{number}, " + recursive(number-1);
+    static string recursive(int number)
+    {
+        if (number == 1) return "1";
+        return $"{number}, " + recursive(number - 1);
     }
 }
