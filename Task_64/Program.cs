@@ -14,7 +14,8 @@ internal partial class Program
 
     static string recursive(int number)
     {
+        int increment = number < 1 ? 1 : -1;
         if (number == 1) return "1";
-        return $"{number}, " + recursive(number - 1);
+        return $"{number}, " + recursive(number + increment);
     }
 }
