@@ -13,9 +13,11 @@ internal partial class Program
         Console.WriteLine($"A = {a}; B = {b} -> {Pow(a, b)}");
     }
 
-    static int Pow(int a, int b)
+    static double Pow(int a, int b)
     {
+        System.Console.WriteLine($"{a} , {b}");
         if (b == 0) return 1;
+        if (b < 0) return 1 / Pow(a, -b);
         if (b % 2 == 0) return Pow(a * a, b / 2);
         return a * Pow(a, b - 1);
     }
